@@ -1,0 +1,17 @@
+<h2>Welcome</h2>
+<p>Today we are <%= Time.now.strftime("%d/%m/%Y") %><p>
+
+<h2>Find lots of restaurants</h2>
+<ol>
+  <% @categories.each do |category| %>
+    <li><%= category %></li>
+  <% end %>
+</ol>
+
+<form action="/restaurants" method="get">
+  <input type="text" name="food_type" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+<!-- <a href="/about">A propos</a> -->
+<%= link_to "A propos", about_path %>
